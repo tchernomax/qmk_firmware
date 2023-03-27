@@ -1,0 +1,9 @@
+http://www.keyboard-layout-editor.com/#/gists/b2e11c2b4d923592439458594c7084ba
+
+# plug the usb cable at the master board
+qmk flash -c -kb bastardkb/charybdis/4x6/v2/splinky_3 -km perso
+# tap 2 times on the reset button (at the back of the board)
+
+# plug the usb cable at the slave board
+qmk flash -kb bastardkb/charybdis/4x6/v2/splinky_3 -km perso
+# tap 2 times on the reset button (at the back of the board)
