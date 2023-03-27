@@ -119,16 +119,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 			perso_mouse_scrolling = record->event.pressed;
 			break;
 		case PERSO_MOUSE_SNIP:
-			// charybdis sniping mode doesn't work well so I implemented my own
-			uint16_t cpi_target;
 			if (record->event.pressed) {
-				cpi_target = 200;
+				pointing_device_set_cpi(200);
 			} else {
-				cpi_target = CHARYBDIS_MINIMUM_DEFAULT_DPI;
-			}
-
-			while (pointing_device_get_cpi() != cpi_target) {
-				pointing_device_set_cpi(cpi_target);
+				pointing_device_set_cpi(CHARYBDIS_MINIMUM_DEFAULT_DPI);
 			}
 			break;
 		case PERSO_RGB_TOG:
