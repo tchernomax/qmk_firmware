@@ -94,7 +94,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
 
 		// make 1 scroll movement
 		if (abs(perso_mouse_scroll_waiting_h) > abs(perso_mouse_scroll_waiting_v)) {
-			mouse_report.h = perso_mouse_scroll_waiting_h > 0 ? -1 : 1;
+			mouse_report.h = perso_mouse_scroll_waiting_h > 0 ? 1 : -1;
 		} else {
 			mouse_report.v = perso_mouse_scroll_waiting_v > 0 ? -1 : 1;
 		}
